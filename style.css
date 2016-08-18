@@ -1,0 +1,22 @@
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+label{
+    padding: 5px;
+    display: block;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ccc;
+    padding: 5px;
+}
+
+#Calculator {
+    margin-top: 74px;
+}
