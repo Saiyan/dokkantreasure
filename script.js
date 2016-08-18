@@ -73,6 +73,7 @@
         $('.days-left').text(days+'d '+hours+'h '+mins+'m');
     }
 
+    _treasures.load();
     init();
     calcResult();
     calcDaysLeft();

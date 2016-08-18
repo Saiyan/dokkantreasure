@@ -134,9 +134,19 @@ function Treasures() {
         }
     ];
 
-    var storedTreasures = localStorage.getItem("TREASURES");
-    if(storedTreasures)
-        treasures = JSON.parse(storedTreasures);
+    me.load = function(){
+        var storedTreasures = localStorage.getItem("TREASURES");
+        if(storedTreasures){
+            var stored = JSON.parse(storedTreasures);
+            if(stored && Array.isArray(stored)){
+                stored.forEach(function(item,index){
+                    if(treasures[index]){
+                        treasures[index].enabled = item.enabled;
+                    }
+                });
+            }
+        }
+    };
 
     me.save = function(){
         localStorage.setItem("TREASURES", JSON.stringify(treasures));
@@ -150,5 +160,5 @@ function Treasures() {
 
     me.getAll = function(){
         return treasures;
-    }
+    };
 }
