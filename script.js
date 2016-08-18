@@ -37,6 +37,12 @@
             calcResult();
             calcGemsPerDay();
         });
+
+        $('.btn-save').click(function(){
+            $(this).prop('disabled', true);
+            _treasures.save();
+            $(this).prop('disabled', false);
+        });
     }
 
     var calcGemsPerDay = function () {

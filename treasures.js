@@ -145,7 +145,6 @@ function Treasures() {
     me.setEnabled = function(index, enabled){
         if(treasures[index]){
             treasures[index].enabled = enabled == true;
-            me.save();
         }
     };
 

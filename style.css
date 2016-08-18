@@ -2,6 +2,7 @@ body{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     padding: 0;
     margin: 0;
+    min-width: 300px;
 }
 
 label{
@@ -19,4 +20,21 @@ header{
 
 #Calculator {
     margin-top: 74px;
+}
+
+.btn-save{
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    left: 210px;
+    width: 70px;
+    height: 36px;
+    border: #000;
+    background: seagreen;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.btn-save:disabled{
+    background: #ccc;
 }
